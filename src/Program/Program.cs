@@ -26,9 +26,28 @@ namespace Full_GRASP_And_SOLID
             recipe.AddStep(new Step(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120));
             recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
 
+            /*
             AllInOnePrinter printer = new AllInOnePrinter();
             printer.PrintRecipe(recipe, Destination.Console);
             printer.PrintRecipe(recipe, Destination.File);
+            */
+            //---------------------------------------------------------------------------------
+            /*Comente estas lineas que son las que interfieren 
+            en el cambio que  realice aplicando el patron Polymorphism,
+            AllInOnePrinter se elimina(la comento para no eliminarla y visualizar cambios), 
+            se crea la Interface IPrinter y las clases ConsolePrinter y FilePrinter.
+            De esta forma el codigo que varia esta en diferentes clases con una
+            operacion polimorfica "PrintRecipe"
+            A continuacion, el codigo acorde a esas modificaciones
+            */
+            //---------------------------------------------------------------------------------
+            IPrinter printer;
+            printer = new ConsolePrinter();
+            printer.PrintRecipe(recipe);
+            printer = new FilePrinter();
+            printer.PrintRecipe(recipe);
+            //---------------------------------------------------------------------------------
+
         }
 
         private static void PopulateCatalogs()

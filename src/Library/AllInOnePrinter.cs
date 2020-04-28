@@ -3,9 +3,16 @@
 // Copyright (c) Programación II. Derechos reservados.
 // </copyright>
 //---------------------------------------------------------------------------------
-using System;
-using System.IO;
+//using System;
+//using System.IO;
 
+//---------------------------------------------------------------------------------
+/*Usando el Patron Polymorfism, esta clase se elimina(la comento para no eliminarla y visualizar cambios), 
+se crea la Interface IPrinter y las clases ConsolePrinter y FilePrinter
+*/
+//---------------------------------------------------------------------------------
+
+/*
 namespace Full_GRASP_And_SOLID.Library
 {
     public enum Destination
@@ -29,3 +36,4 @@ namespace Full_GRASP_And_SOLID.Library
         }
     }
 }
+*/
